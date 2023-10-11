@@ -2,6 +2,8 @@ import styles from "../style";
 import { discount, robot } from "../assets";
 import GetStarted from "./GetStarted";
 import bg from "../assets/bg.png";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Hero = () => {
   return (
@@ -44,11 +46,9 @@ const Hero = () => {
       <div
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
-        <img
-          src={robot}
-          alt="billing"
-          className="w-[100%] h-[100%] relative z-[5]"
-        />
+        <div className="w-[100%] h-[100%] relative z-[5]">
+          <LazyLoadImage alt={"billing"} effect="blur" src={robot} />
+        </div>
 
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
