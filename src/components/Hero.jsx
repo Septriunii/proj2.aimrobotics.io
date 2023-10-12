@@ -11,11 +11,10 @@ const Hero = () => {
       id="home"
       className={`flex md:flex-row flex-col ${styles.paddingY} lg:-mt-20 z-50    `}
     >
-      <img
-        src={bg}
-        alt=""
-        className="absolute w-full top-0 opacity-20 transform scale-y-[-1] right-0 -z-10"
-      />
+      <div className="absolute w-full -top-5 opacity-20 transform scale-y-[-1] right-0 -z-10">
+        <LazyLoadImage src={bg} alt="" loading="eager" effect="blur" />
+      </div>
+
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
       >
@@ -47,7 +46,12 @@ const Hero = () => {
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
         <div className="w-[100%] h-[100%] relative z-[5]">
-          <LazyLoadImage alt={"billing"} effect="blur" src={robot} />
+          <LazyLoadImage
+            alt={"billing"}
+            effect="blur"
+            src={robot}
+            loading="eager"
+          />
         </div>
 
         {/* gradient start */}

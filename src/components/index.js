@@ -1,11 +1,16 @@
-import Navbar from "./Navbar";
-import Billing from "./Billing";
-import CardDeal from "./CardDeal";
-import Business from "./Business";
-import CTA from "./CTA";
-import Stats from "./Stats";
-import Footer from "./Footer";
-import Testimonials from "./Testimonials";
+import { lazy } from "react";
+
+// const SummaryPage = lazy(() => import("./components/SummaryPage"));
+
+const Navbar = lazy(() => import("./Navbar"));
+const Billing = lazy(() => import("./Billing"));
+const CardDeal = lazy(() => import("./CardDeal"));
+const Business = lazy(() => import("./Business"));
+const CTA = lazy(() => import("./CTA"));
+const Stats = lazy(() => import("./Stats"));
+const Footer = lazy(() => import("./Footer"));
+const Testimonials = lazy(() => import("./Testimonials"));
+
 import Hero from "./Hero";
 
 export {

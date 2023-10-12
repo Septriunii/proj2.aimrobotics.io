@@ -10,6 +10,7 @@ import {
   Testimonials,
   Hero,
 } from "./components";
+import { Suspense } from "react";
 
 const App = () => (
   <div className="bg-primary w-full overflow-hidden">
@@ -27,13 +28,15 @@ const App = () => (
 
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        <Stats />
-        <Business />
-        <Billing />
-        <CardDeal />
-        <Testimonials />
-        <CTA />
-        <Footer />
+        <Suspense fallback={null}>
+          <Stats />
+          <Business />
+          <Billing />
+          <CardDeal />
+          <Testimonials />
+          <CTA />
+          <Footer />
+        </Suspense>
       </div>
     </div>
   </div>
